@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the youtube charset</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-800 mx-auto mt-20 flex flex-col justify-center items-center ">
+
+        <div id="joindiv" class=" container mb-7 sm:max-w-md md:max-w-lg lg:max-w-lg  rounded mx-auto flex flex-col justify-center items-center min-h-fit">
+
+            <h1 class="font-bold mt-7 text-3xl text-gray-200">Join the Chat</h1>
+            
+            <input value="" class="p-2 my-4 rounded border text-center outline-black" id="chat-id" placeholder="Enter Chat Id" type="text">
+            
+            <button id="joinbtn" class="px-3 bg-cyan-500 py-1  w-1/5 hover:bg-cyan-700  rounded mb-7">Join</button>
+                <p class="text-red-400" id="erroMsj"></p>
+        </div>
+
+        <div id="texting" class=" p-2 w-3/5 h-3/4 rounded   mx-auto flex flex-col justify-center items-center h-800">
+
+            <div class="msjContainer   w-full p-4 rounded">
+                <div id="msjlist" class="msjfield max-h-80 overflow-y-auto flex flex-col p-5 text-black bg-gray-200 justify-end items-end space-y-2" style="height: 300px;">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+
+                <div class="inputsent flex justify-center w-full items-center  space-x-2 p-2">
+                    
+                    <button id="disconnect" class="bg-red-500 p-2 w-1/5 rounded">Disconnect</button>
+                 
+                   
+                    <input class="message-input wrap w-4/5 p-2 rounded border-solid border-2 border-gray-400 text-center outline-black" id="messages" placeholder="Message......" type="text">
+                    
+                    <button id="send-button" class="bg-green-500 p-2 w-1/5 rounded">Send</button>
+                </div>
+                
+                
+            </div>
+
+            
+            
+        </div>
+        
+       
+        <script src="socket.io.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>
